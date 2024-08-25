@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace fuel_manager.Models
 {
-    [Table("consumos")]
+    [Table("Consumos")]
     public class Consumo
     {
         [Key]
@@ -13,6 +13,7 @@ namespace fuel_manager.Models
         [Required]
         public DateTime Data { get; set; }
         [Required]
+        [Column(TypeName = "decimal(18,2)")] //indica para o banco de dados que vai ser decimal com no max 18 digitos e 2 casas decimais
         public decimal Valor { get; set; }
         [Required]
         public TipoCombustivel Tipo {  get; set; }
