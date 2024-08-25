@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace fuel_manager.Models
 {
     [Table("Consumos")]
-    public class Consumo
+    public class Consumo : LinksHATEOS
     {
         [Key]
         public int Id{ get; set; }
@@ -32,4 +32,3 @@ namespace fuel_manager.Models
         Gasolina
     }
 }
-//comentaria para poder gerar mais um commit 
